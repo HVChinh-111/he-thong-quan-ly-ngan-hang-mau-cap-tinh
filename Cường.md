@@ -30,7 +30,7 @@
 * UC11: Ghi nhận kết quả điều chế phẩm máu (xét nghiệm) (Chương 4 mục 2 https://luatvietnam.vn/y-te/thong-tu-26-2013-tt-byt-bo-y-te-82981-d1.html).
 * UC12: Cập nhật kết quả xét nghiệm 5 bệnh truyền nhiễm cho túi máu.
 * UC13: Cập nhật vị trí lưu trữ túi máu vào kho lạnh.
-* UC14: Xem biểu đồ thống kê tồn kho theo nhóm máu thời gian thực.
+* UC14: Xem biểu đồ thống kê tồn kho theo thời gian thực.
 * UC15: Xác nhận phiếu xuất kho máu.
 * UC16: Lập phiếu và xác nhận tiêu hủy túi máu không đạt tiêu chuẩn (Chương 4 mục 1 điều 18 khoản 5 https://luatvietnam.vn/y-te/thong-tu-26-2013-tt-byt-bo-y-te-82981-d1.html).
 
