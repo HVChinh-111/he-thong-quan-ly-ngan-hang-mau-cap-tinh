@@ -43,7 +43,7 @@ Việc triển khai hệ thống nhằm đạt được các mục tiêu chính 
 * **Tối ưu hóa quản lý tồn kho máu**, giúp cơ quan quản lý nắm được số lượng máu theo từng nhóm máu và chế phẩm theo thời gian thực.
 * **Giảm thiểu lãng phí chế phẩm máu**, đặc biệt đối với các thành phần có hạn sử dụng ngắn như tiểu cầu.
 * **Rút ngắn thời gian đáp ứng các ca cấp cứu**, giúp bệnh viện tuyến dưới có thể gửi yêu cầu cấp máu trực tuyến thay vì phải liên hệ thủ công.
-* **Nâng cao trải nghiệm của người hiến máu**, thông qua việc theo dõi lịch sử hiến máu và nhận thông báo về việc sử dụng túi máu.
+* **Nâng cao trải nghiệm của người hiến máu**, thông qua việc theo dõi lịch sử hiến máu.
 
 **Phạm vi**
 
@@ -93,7 +93,7 @@ Quy trình cấp tài khoản được thực hiện như sau:
 1. Trung tâm Huyết học hoặc Sở Y tế lập danh sách nhân sự tham gia chiến dịch hiến máu.
 2. Quản trị viên hệ thống tạo tài khoản cho từng cán bộ dựa trên **mã số nhân viên và chứng chỉ hành nghề y tế**.
 3. Tài khoản được cấp quyền truy cập vào hệ thống trong **khoảng thời gian diễn ra chiến dịch hiến máu**.
-4. Sau khi chiến dịch kết thúc, quyền truy cập của tài khoản có thể bị thu hồi hoặc chuyển sang trạng thái tạm khóa.
+4. Sau khi chiến dịch kết thúc, quyền truy cập của tài khoản sẽ chuyển sang trạng thái tạm khóa.
 
 
 **3. Kỹ thuật viên xét nghiệm (Lab Technician)**
