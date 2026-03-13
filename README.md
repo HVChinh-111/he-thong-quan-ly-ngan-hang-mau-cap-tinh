@@ -162,8 +162,24 @@ Nhiệm vụ của họ trong hệ thống bao gồm:
 
 Tương tự cán bộ y tế tiếp nhận, **tài khoản của kỹ thuật viên xét nghiệm được tạo bởi quản trị viên hệ thống**, không cho phép tự đăng ký.
 
-**4. Nhân viên quản lý kho**
+**4. Nhân viên quản lý kho (Inventory Manager)**
 
+Nhóm người dùng này bao gồm các nhân viên làm việc tại **kho lưu trữ máu của Trung tâm Huyết học – Truyền máu cấp tỉnh**. Họ chịu trách nhiệm quản lý các túi máu đã hoàn thành xét nghiệm và được đưa vào hệ thống kho lạnh bảo quản.
+
+Nhiệm vụ của nhân viên quản lý kho trong hệ thống bao gồm:
+
+* Quét mã vạch trên túi máu để xác định thông tin và trạng thái của túi máu trong hệ thống.
+* Cập nhật **vị trí lưu trữ của túi máu** trong kho, ví dụ như tủ lạnh, ngăn chứa hoặc kệ bảo quản.
+* Theo dõi **số lượng máu tồn kho theo từng nhóm máu và từng loại chế phẩm máu**.
+* Xác nhận thao tác **nhập kho và xuất kho túi máu** khi có yêu cầu cấp phát từ bệnh viện.
+* Kiểm tra hạn sử dụng của các túi máu và phối hợp với hệ thống để đảm bảo nguyên tắc **FEFO (First Expired, First Out)**, ưu tiên xuất các túi máu có hạn sử dụng gần nhất.
+
+Tài khoản của nhân viên quản lý kho **không được phép tự đăng ký trên hệ thống**. Quy trình cấp tài khoản được thực hiện như sau:
+
+1. Trung tâm Huyết học – Truyền máu lập danh sách nhân viên phụ trách quản lý kho máu.
+2. Danh sách được gửi cho quản trị viên hệ thống để tạo tài khoản.
+3. Quản trị viên gán quyền **Inventory Manager** cho các tài khoản này.
+4. Các tài khoản chỉ được phép truy cập vào **phân hệ quản lý kho máu và xuất nhập kho**, không có quyền truy cập vào dữ liệu cá nhân của người hiến máu.
 
 **5. Nhân viên bệnh viện tuyến dưới (Hospital Staff)**
 
