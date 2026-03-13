@@ -1,5 +1,11 @@
 # Hệ thống quản lý Ngân hàng máu Thành phố Hà Nội
 
+> Thông tin nhóm:
+> Nguyễn Hoàng Biên - B23DCKH007
+> Hoàng Văn Chính - B23DCKH011
+> Nguyễn Đăng Cường - B23DCKH015
+> Hán Hữu Đăng - B23DCKH019
+
 ### PHẦN 1: MÔ TẢ HỆ THỐNG
 
 #### 1. Mô tả chung về hệ thống và lý do lựa chọn
@@ -164,12 +170,12 @@ Tương tự cán bộ y tế tiếp nhận, **tài khoản của kỹ thuật v
 
 **4. Nhân viên quản lý kho (Inventory Manager)**
 
-Nhóm người dùng này bao gồm các nhân viên làm việc tại **kho lưu trữ máu của Trung tâm Huyết học – Truyền máu cấp tỉnh**. Họ chịu trách nhiệm quản lý các túi máu đã hoàn thành xét nghiệm và được đưa vào hệ thống kho lạnh bảo quản.
+Nhóm người dùng này bao gồm các nhân viên làm việc tại **kho lưu trữ máu của Trung tâm Huyết học**. Họ chịu trách nhiệm quản lý các túi máu đã hoàn thành xét nghiệm và được đưa vào hệ thống kho lạnh bảo quản.
 
 Nhiệm vụ của nhân viên quản lý kho trong hệ thống bao gồm:
 
 * Quét mã vạch trên túi máu để xác định thông tin và trạng thái của túi máu trong hệ thống.
-* Cập nhật **vị trí lưu trữ của túi máu** trong kho, ví dụ như tủ lạnh, ngăn chứa hoặc kệ bảo quản.
+* Quản lý túi máu: Cập nhật **vị trí lưu trữ của túi máu** trong kho, ví dụ như tủ lạnh, ngăn chứa hoặc kệ bảo quản, xác nhận xóa bỏ túi máu quá hạn.
 * Theo dõi **số lượng máu tồn kho theo từng nhóm máu và từng loại chế phẩm máu**.
 * Xác nhận thao tác **nhập kho và xuất kho túi máu** khi có yêu cầu cấp phát từ bệnh viện.
 * Kiểm tra hạn sử dụng của các túi máu và phối hợp với hệ thống để đảm bảo nguyên tắc **FEFO (First Expired, First Out)**, ưu tiên xuất các túi máu có hạn sử dụng gần nhất.
@@ -217,14 +223,20 @@ Ban quản trị có quyền cao nhất trong hệ thống và chịu trách nhi
 * Xuất báo cáo phục vụ công tác quản lý của Sở Y tế.
 
 
-**Người dùng có những chức năng gì và hoạt động ra sao?**
+### Người dùng có những chức năng gì và hoạt động ra sao?
 
 * **Đối với Người hiến máu:** Người dùng truy cập cổng thông tin web, đăng ký tài khoản và nhập thông tin cá nhân hoặc đăng nhập nếu đã có tài khoản. Người dùng có thể xem các chiến dịch đang được mở trên địa bàn Hà Nội bất cứ lúc nào. Nếu hệ thống kiểm tra lịch sử hiến máu lớn hơn 12 tuần [(Thông tin)](https://www.vinmec.com/vie/bai-viet/thoi-gian-toi-thieu-giua-cac-lan-hien-mau-la-bao-lau-de-dam-bao-suc-khoe-vi), người dùng được phép chọn địa điểm chiến dịch và khung giờ (Time-slot) để đặt lịch hẹn.
+
 * **Đối với Cán bộ y tế:** Sử dụng thiết bị di động quét mã QR lịch hẹn của người dân. Cán bộ tiến hành đo đạc và nhập các chỉ số như huyết áp, nhịp tim và lấy máu xét nghiệm nhanh và gửi đến cho kỹ thuật viên xét nghiệm (có hợp lệ hay không). Nếu chỉ số hợp lệ, cán bộ nhấn nút "Đồng ý lấy máu", hệ thống sẽ gửi lệnh máy in xuất ra một tem mã vạch để dán lên túi máu.
-* **Đối với Kỹ thuật viên xét nghiệm:** Đăng nhập vào phân hệ quản lý kho. Kỹ thuật viên dùng máy quét mã vạch trên túi máu, lấy 3-4 ống máu nhỏ để làm xét nghiệm chuyên sâu và cập nhật kết quả xét nghiệm âm tính hoặc dương tính. Nếu âm tính, kỹ thuật viên gán vị trí lưu trữ (Ví dụ: Tủ lạnh số 02, Ngăn số 04) để đưa vào kho.
+
+* **Đối với Kỹ thuật viên xét nghiệm:** Kỹ thuật viên đăng nhập vào hệ thống và sử dụng máy quét mã vạch trên ống máu xét nghiệm nhanh để truy xuất thông tin. Trước tiên, kỹ thuật viên thực hiện xét nghiệm nhanh tại chỗ đối với ống máu xét nghiệm nhanh và nhập kết quả xét nghiệm nhanh vào hệ thống. Nếu kết quả xét nghiệm nhanh không đạt yêu cầu, kết quả sẽ được kỹ thuật viên cập nhật kết quả lên hệ thống, lúc này sẽ không lấy máu hiến của bệnh nhân. Nếu kết quả đạt yêu cầu, **Cán bộ y tế** sẽ có thể ấn vào nút đồng ý lấy máu để lấy máu của người hiến. Sau khi lấy máu và túi máu được chuyển về, kỹ thuật viên tiếp tục lấy 3–4 ống máu nhỏ từ túi máu để thực hiện các xét nghiệm chuyên sâu nhằm sàng lọc các bệnh truyền nhiễm bắt buộc. Sau khi hoàn tất các xét nghiệm, kỹ thuật viên tiếp tục cập nhật kết quả xét nghiệm (âm tính hoặc dương tính) vào hệ thống. Nếu kết quả xét nghiệm chuyên sâu đạt yêu cầu (âm tính), túi máu được chuyển sang trạng thái sẵn sàng lưu trữ trong kho.
+
+* **Đối với Nhân viên quản lý kho:** Nhân viên quản lý kho đăng nhập vào phân hệ quản lý kho máu để thực hiện các thao tác quản lý túi máu trong kho. Nhân viên có thể sử dụng máy quét mã vạch để xem vị trí lưu trữ và thông tin chi tiết của từng túi máu trong hệ thống. Ngoài ra, nhân viên quản lý kho chịu trách nhiệm quản lý trạng thái các túi máu, theo dõi hạn sử dụng và cập nhật vị trí lưu trữ của túi máu trong kho lạnh. Hệ thống cũng cung cấp chức năng xem các báo cáo thống kê tồn kho theo từng nhóm máu và loại chế phẩm để hỗ trợ công tác quản lý. Khi có yêu cầu cấp phát máu, nhân viên quản lý kho có thể tạo và duyệt các yêu cầu cấp máu trực tiếp từ nhân viên nội bộ hoặc duyệt các yêu cầu cấp máu gửi từ bệnh viện tuyến dưới, đảm bảo việc xuất kho được thực hiện đúng quy trình và cập nhật trạng thái túi máu trong hệ thống.
+
 * **Đối với Bệnh viện tuyến dưới:** Nhân viên bệnh viện đăng nhập, điền biểu mẫu điện tử xin cấp máu chỉ định rõ mức độ ưu tiên. Hệ thống tại Trung tâm Huyết học sẽ tiếp nhận, chạy thuật toán FEFO để tìm kiếm các túi máu phù hợp nhất, trừ đi số lượng tồn kho và thông báo trạng thái "Đang vận chuyển" về lại màn hình của bệnh viện.
 
-**Những thông tin/đối tượng thực thể mà hệ thống cần xử lý:**
+
+### Những thông tin/đối tượng thực thể mà hệ thống cần xử lý
 
 1. **Tài khoản người dùng (User):** Lưu trữ thông tin cá nhân, nhóm máu, lịch sử hiến máu, mật khẩu mã hóa.
 2. **Hồ sơ sức khỏe (Health Record):** Lưu trữ các chỉ số sức khỏe của mỗi lần hiến máu.
@@ -232,85 +244,86 @@ Ban quản trị có quyền cao nhất trong hệ thống và chịu trách nhi
 4. **Túi máu (Blood Bag):** Đối tượng quan trọng nhất, lưu trữ mã vạch, ngày lấy máu, ngày hết hạn, trạng thái hiện tại (An toàn, Nhiễm bệnh, Hết hạn, Đã xuất kho).
 5. **Yêu cầu cấp phát (Blood Request):** Lưu trữ thông tin bệnh viện yêu cầu, số lượng đơn vị máu cần, thời gian yêu cầu và trạng thái đáp ứng.
 
-**Quan hệ giữa các đối tượng (Thực thể):**
+
+### Quan hệ giữa các đối tượng (Thực thể)
 
 * Một Người hiến máu có thể tham gia nhiều Chiến dịch khác nhau, chỉ cần đủ điều kiện về thời gian.
 * Một Chiến dịch có thể tiếp nhận hàng ngàn Người hiến máu đăng ký.
 * Một Người hiến máu đóng góp tạo ra một Túi máu trong mỗi lần hiến hợp lệ.
 * Một Túi máu chỉ có duy nhất một bộ Hồ sơ sức khỏe và Kết quả xét nghiệm đi kèm.
+* Một Túi máu sau khi đạt tiêu chuẩn xét nghiệm sẽ được *Nhân viên quản lý kho* tiếp nhận và lưu trữ trong kho lạnh.
 * Một Yêu cầu cấp phát từ bệnh viện có thể bao gồm nhiều Túi máu khác nhau, nhưng một Túi máu chỉ được cấp phát cho một Yêu cầu cấp phát duy nhất.
 
+### 3. Mô hình nghiệp vụ bằng UML
 
-#### 3. Mô hình nghiệp vụ bằng UML
+**Xác định các Actor (Tác nhân) của hệ thống:**
 
-**Xác định các Actor của hệ thống:**
+1. **Người hiến máu (Blood Donor):** Tác nhân độc lập bên ngoài hệ thống.
+2. **Người dùng nội bộ (Internal User):** Tác nhân tổng quát (Super-actor) đại diện cho tất cả nhân sự có tài khoản cấp phát nội bộ. Tác nhân này chứa 05 tác nhân con (Sub-actors) kế thừa chức năng đăng nhập, bao gồm:
+* Cán bộ y tế
+* Kỹ thuật viên xét nghiệm
+* Kỹ thuật viên kho
+* Nhân viên bệnh viện tuyến dưới
+* Ban quản trị
 
-1. Người hiến máu (Donor)
-2. Cán bộ y tế (Medical Staff)
-3. Kỹ thuật viên xét nghiệm & Kho (Lab Technician)
-4. Bệnh viện tuyến dưới (Hospital)
-5. Ban Quản trị (Admin)
+**Các Use Case chi tiết với từng Actor:**
 
-**Các Use Case chi tiết cho từng Actor:**
-
-* **Actor: Người hiến máu**
-* UC01: Đăng ký tài khoản hệ thống.
-* UC02: Đăng nhập / Đăng xuất.
-* UC03: Quản lý hồ sơ cá nhân.
-* UC04: Điền tờ khai y tế điện tử.
-* UC05: Tra cứu chiến dịch và đặt lịch hẹn hiến máu.
-* UC06: Xem lịch sử hiến máu và tải chứng nhận điện tử.
-
-
-* **Actor: Cán bộ y tế**
-* UC07: Quét mã QR kiểm tra thông tin lịch hẹn.
-* UC08: Ghi nhận chỉ số sinh tồn lâm sàng.
-* UC09: Từ chối hoặc Phê duyệt người dân đủ điều kiện lấy máu.
-* UC10: Khởi tạo mã định danh (Barcode) cho túi máu vật lý.
+**Actor: Người hiến máu**
+* **UC01: Đăng ký tài khoản:** Bắt buộc bao gồm luồng `<<Include>>` **Nhập thông tin cá nhân** để định danh.
+* **UC02: Đăng nhập:** Truy cập vào hệ thống dành cho người dùng cuối.
+* **UC03: Quản lý hồ sơ cá nhân:** Cập nhật các thông tin cá nhân
+* **UC04: Tra cứu chiến dịch:** Khi thực hiện chức năng này, hệ thống bắt buộc chạy luồng `<<Include>>` **Kiểm tra điều kiện hiến máu** (thời gian giữa các lần hiến). Nếu thỏa mãn điều kiện, ca sử dụng này có thể mở rộng `<<Extend>>` sang chức năng **Đặt lịch hiến máu**.
+* **UC05: Xem lịch sử hiến máu và tải chứng nhận điện tử:** Truy xuất kết quả của các lần tham gia trước.
 
 
-* **Actor: Kỹ thuật viên xét nghiệm & Kho**
-* UC11: Ghi nhận kết quả điều chế phẩm máu (xét nghiệm) (Chương 4 mục 2 https://luatvietnam.vn/y-te/thong-tu-26-2013-tt-byt-bo-y-te-82981-d1.html).
-* UC12: Cập nhật kết quả xét nghiệm 5 bệnh truyền nhiễm cho túi máu.
-* UC13: Cập nhật vị trí lưu trữ túi máu vào kho lạnh.
-* UC14: Xem biểu đồ thống kê tồn kho theo thời gian thực.
-* UC15: Xác nhận phiếu xuất kho máu.
-* UC16: Lập phiếu và xác nhận tiêu hủy túi máu không đạt tiêu chuẩn (Chương 4 mục 1 điều 18 khoản 5 https://luatvietnam.vn/y-te/thong-tu-26-2013-tt-byt-bo-y-te-82981-d1.html).
+**Actor: Người dùng nội bộ (Và các tác nhân kế thừa)**
+* **UC06: Đăng nhập:** Toàn bộ 5 tác nhân con đều kế thừa tính năng xác thực tài khoản qua cổng nội bộ này.
 
 
-* **Actor: Bệnh viện tuyến dưới**
-* UC17: Tạo lập đơn yêu cầu cấp phát máu khẩn cấp hoặc bình thường.
-* UC18: Theo dõi trạng thái tiến độ của đơn yêu cầu cấp máu.
-* UC19: Xác nhận nhập kho nội bộ tại bệnh viện sau khi nhận máu từ ngân hàng máu (Chương 5 điều 40 https://luatvietnam.vn/y-te/thong-tu-26-2013-tt-byt-bo-y-te-82981-d1.html).
+**Actor: Cán bộ y tế**
+* **UC07: Quét QR lịch hẹn và nhập các chỉ số cơ bản của người hiến máu (đủ / không đủ điều kiện):** Trong trường hợp người hiến được đánh giá là "Đủ điều kiện", chức năng này sẽ kích hoạt luồng `<<Extend>>` **Sinh mã vạch cho ống máu xét nghiệm nhanh**.
+* **UC08: Ấn nút đồng ý lấy máu:** Hành động này bắt buộc hệ thống thực thi luồng `<<Include>>` **Tự động in mã vạch cho túi máu**.
 
 
-* **Actor: Ban Quản trị**
-* UC20: Tạo mới, chỉnh sửa, hủy bỏ các chiến dịch hiến máu.
-* UC21: Quản lý tài khoản của cán bộ y tế, kỹ thuật viên và bệnh viện.
-* UC22: Trích xuất báo cáo thống kê lượt người hiến và tỷ lệ hủy máu.
+* **Actor: Kỹ thuật viên xét nghiệm**
+* **UC09: Nhập kết quả xét nghiệm nhanh (đủ / không đủ điều kiện):** Nếu kết quả là đạt (đủ điều kiện), hệ thống sẽ kích hoạt luồng `<<Extend>>` **Sinh mã vạch cho túi máu và các ống máu xét nghiệm chuyên sâu** để chuẩn bị cho khâu chọc tĩnh mạch.
+* **UC10: Nhập kết quả xét nghiệm chuyên sâu (đủ / không đủ điều kiện):** Sau khi hoàn tất nhập kết quả của 5 bệnh truyền nhiễm, nếu túi máu an toàn (đủ điều kiện), hệ thống sẽ tự động kích hoạt luồng `<<Extend>>` **Tự động sắp xếp vị trí và ghi nhận ngày hết hạn của túi máu** mà không cần con người tính toán thủ công.
 
+
+* **Actor: Kỹ thuật viên kho**
+* **UC11: Quét mã vạch để xem vị trí đặt túi máu, thông tin của túi máu:** Truy xuất hồ sơ vật lý trong kho lạnh.
+* **UC12: Quản lý túi máu:** Thực hiện các nghiệp vụ kiểm kê, xử lý túi máu lỗi hoặc quá hạn.
+* **UC13: Xem báo cáo thống kê tồn kho:** Theo dõi số lượng theo nhóm máu và chế phẩm.
+* **UC14: Tạo và duyệt yêu cầu cấp máu trực tiếp của nhân viên nội bộ:** Xử lý các chỉ định truyền máu ngay tại đơn vị sở tại.
+* **UC15: Duyệt yêu cầu cấp máu của bệnh viện tuyến dưới:** Chấp thuận và tiến hành xuất kho cho các đơn hàng từ xa.
+
+
+* **Actor: Nhân viên bệnh viện tuyến dưới**
+* **UC16: Tạo đơn yêu cầu cấp máu (khẩn cấp / bình thường):** Khi hoàn tất biểu mẫu, hệ thống bắt buộc thực thi luồng `<<Include>>` **Gửi yêu cầu đến Kỹ thuật viên kho** để thông báo lập tức.
+* **UC17: Theo dõi tiến độ của đơn yêu cầu cấp máu:** Xem trạng thái đơn hàng (đang duyệt, đang xuất kho).
+
+
+* **Actor: Ban quản trị**
+* **UC18: Quản lý tài khoản:** Cấp phát, phân quyền, khóa tài khoản cho toàn bộ hệ sinh thái "Người dùng nội bộ".
+* **UC19: Quản lý các chiến dịch hiến máu:** Tổ chức, sắp xếp lịch trình và địa điểm tiếp nhận.
+* **UC20: Trích xuất báo cáo thống kê lượt người hiến và tỷ lệ hủy máu quá hạn:** Phục vụ công tác quản lý vĩ mô của Sở Y tế.
 
 
 ### 4. Bảng yêu cầu người dùng (User Requirements)
 
-| ID | Mô tả yêu cầu hệ thống | Độ ưu tiên | Mapping (Use Case) |
-| :--- | :--- | :--- | :-- |
-| **I** | **Luồng nghiệp vụ Người hiến máu** | | |
-| UR-01 | Hệ thống phải cho phép người dùng định danh (đăng ký xác thực OTP, đăng nhập) và quản lý cập nhật hồ sơ cá nhân. | Cao | UC01, UC02, UC03 |
-| UR-02 | Hệ thống phải cung cấp quy trình đặt lịch khép kín: điền tờ khai y tế, tra cứu chiến dịch, chọn lịch hẹn và chặn tự động nếu chưa đủ khoảng cách ngày quy định. | Cao | UC04, UC05 |
-| UR-03 | Hệ thống phải lưu trữ lịch sử hiến máu trọn đời và cho phép người dùng tải xuống chứng nhận điện tử. | Trung bình | UC06 |
-| **II** | **Luồng nghiệp vụ Cán bộ y tế** | | |
-| UR-04 | Hệ thống phải hỗ trợ quét mã QR để tra cứu nhanh lịch hẹn, ghi nhận các chỉ số sinh tồn lâm sàng và đưa ra quyết định phê duyệt/từ chối lấy máu. | Cao | UC07, UC08, UC09 |
-| UR-05 | Hệ thống phải tự động phát sinh mã định danh (Barcode) duy nhất cho từng túi máu ngay khi cán bộ xác nhận lấy máu thành công. | Cao | UC10 |
-| **III** | **Luồng nghiệp vụ Kỹ thuật viên xét nghiệm & Kho** | | |
-| UR-06 | Hệ thống phải cho phép ghi nhận kết quả điều chế và xét nghiệm 5 bệnh truyền nhiễm dưới cơ chế ẩn danh thông tin người hiến (chỉ hiển thị mã túi máu). | Cao | UC11, UC12 |
-| UR-07 | Hệ thống phải tự động đánh dấu "Hủy bỏ" và khóa tính năng xuất kho nếu túi máu có kết quả xét nghiệm dương tính hoặc quá hạn sử dụng. | Cao | UC12 |
-| UR-08 | Hệ thống phải cung cấp công cụ quản lý vị trí lưu trữ vật lý trong kho lạnh và trực quan hóa tồn kho theo nhóm máu theo thời gian thực. | Cao | UC13, UC14 |
-| UR-09 | Hệ thống phải hỗ trợ luồng xuất kho tự động đề xuất theo thuật toán FEFO (Hết hạn trước - Xuất trước) và lập phiếu tiêu hủy cho túi máu không đạt. | Cao | UC15, UC16 |
-| **IV** | **Luồng nghiệp vụ Bệnh viện tuyến dưới** | | |
-| UR-10 | Hệ thống phải cho phép bệnh viện tạo đơn xin cấp phát máu, theo dõi tiến độ xử lý đơn và xác nhận nhập kho nội bộ sau khi nhận được máu. | Cao | UC17, UC18, UC19 |
-| **V** | **Luồng nghiệp vụ Ban Quản trị** | | |
-| UR-11 | Hệ thống phải cung cấp giao diện quản lý toàn diện để tổ chức các chiến dịch hiến máu và phân quyền tài khoản cho nhân sự y tế, bệnh viện. | Cao | UC20, UC21 |
-| UR-12 | Hệ thống phải hỗ trợ trích xuất báo cáo, thống kê dữ liệu chuyên sâu (lượt người hiến, tỷ lệ hủy/nhóm máu) để phục vụ công tác quản lý. | Trung bình | UC22 |
-| **VI** | **Ràng buộc Hệ thống** | | |
-| UR-13 | Hệ thống phải đảm bảo cơ chế xử lý đồng thời để ngăn chặn việc một túi máu bị cấp phát trùng lặp cho nhiều bệnh viện tại cùng một thời điểm. | Cao | |
+| ID | Mô tả chi tiết yêu cầu người dùng | Độ ưu tiên |
+| --- | --- | --- |
+| UR-01 | Hệ thống phải cung cấp chức năng "Đăng ký tài khoản" cho Người hiến máu, yêu cầu bắt buộc phải hoàn thành biểu mẫu "Nhập thông tin cá nhân" mới được phép lưu vào cơ sở dữ liệu. | Cao |
+| UR-02 | Khi Người hiến máu chọn "Tra cứu chiến dịch", hệ thống phải tự động chạy quy trình ngầm "Kiểm tra điều kiện hiến máu" (Ví dụ: khoảng cách thời gian từ lần hiến trước). Nếu thỏa mãn, giao diện mới hiển thị thêm tính năng "Đặt lịch hiến máu". | Cao |
+| UR-03 | Hệ thống phải thiết kế một cổng "Đăng nhập" chung (Single Sign-On module) cho tác nhân "Người dùng nội bộ", tự động phân quyền giao diện tùy thuộc vào vai trò (Cán bộ y tế, Xét nghiệm, Kho, Bệnh viện, Ban quản trị). | Cao |
+| UR-04 | Sau khi Cán bộ y tế quét mã QR và nhập chỉ số sinh tồn đạt chuẩn (Đủ điều kiện), hệ thống phải tự động sinh ra một mã vạch chuyên biệt dành riêng cho "Ống máu xét nghiệm nhanh" để sử dụng tại chỗ. | Cao |
+| UR-05 | Khi Kỹ thuật viên xét nghiệm nhập kết quả xét nghiệm nhanh là "Đủ điều kiện", hệ thống phải lập tức sinh ra bộ mã vạch đồng bộ cho cả "Túi máu chính" và "Các ống máu xét nghiệm chuyên sâu". | Cao |
+| UR-06 | Khi Cán bộ y tế thao tác "Ấn nút đồng ý lấy máu" trên giao diện, hệ thống phải gửi lệnh kết nối thiết bị ngoại vi để tự động in tem mã vạch vật lý cho túi máu. | Cao |
+| UR-07 | Khi Kỹ thuật viên xét nghiệm hoàn tất "Nhập kết quả xét nghiệm chuyên sâu" với kết quả an toàn, phần mềm phải chạy thuật toán để: (1) Tự động sắp xếp vị trí khuyên dùng trong tủ lạnh và (2) Tự động cộng số ngày để ghi nhận chính xác hạn sử dụng của túi máu đó. | Cao |
+| UR-08 | Hệ thống cung cấp cho Kỹ thuật viên kho công cụ quét mã vạch trên túi máu vật lý để truy xuất chính xác vị trí đang đặt túi máu và toàn bộ thông tin lịch sử của túi máu đó. | Trung bình |
+| UR-09 | Hệ thống cung cấp giao diện cho Kỹ thuật viên kho duyệt hai loại yêu cầu cấp máu: (1) Yêu cầu trực tiếp từ nội bộ trung tâm và (2) Yêu cầu từ các bệnh viện tuyến dưới gửi về. | Cao |
+| UR-10 | Khi Nhân viên bệnh viện tuyến dưới nhấn hoàn tất "Tạo đơn yêu cầu cấp máu", hệ thống bắt buộc phải đẩy một thông báo (Notification) ngay lập tức đến màn hình làm việc của Kỹ thuật viên kho trực ca. | Cao |
+| UR-11 | Ban quản trị có thẩm quyền cao nhất để vận hành chức năng "Trích xuất báo cáo", lọc số liệu thống kê về lượt người tham gia hiến máu và tỷ lệ túi máu bị hủy bỏ do quá hạn sử dụng. | Trung bình |
+
+---
+
