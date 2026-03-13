@@ -164,7 +164,6 @@ Tương tự cán bộ y tế tiếp nhận, **tài khoản của kỹ thuật v
 
 **4. Nhân viên quản lý kho**
 
-
 **5. Nhân viên bệnh viện tuyến dưới (Hospital Staff)**
 
 Nhóm này bao gồm:
@@ -203,8 +202,8 @@ Ban quản trị có quyền cao nhất trong hệ thống và chịu trách nhi
 
 **Người dùng có những chức năng gì và hoạt động ra sao?**
 
-* **Đối với Người hiến máu:** Người dùng truy cập cổng thông tin web, đăng ký tài khoản và nhập thông tin cá nhân hoặc đăng nhập nếu đã có tài khoản. Sau đó, họ trả lời bộ câu hỏi khai báo y tế điện tử. Nếu hệ thống kiểm tra lịch sử hiến máu lớn hơn 12 tuần [(Thông tin)](https://www.vinmec.com/vie/bai-viet/thoi-gian-toi-thieu-giua-cac-lan-hien-mau-la-bao-lau-de-dam-bao-suc-khoe-vi), người dùng được phép chọn địa điểm chiến dịch và khung giờ (Time-slot) để đặt lịch hẹn.
-* **Đối với Cán bộ y tế:** Sử dụng thiết bị di động hoặc máy tính bảng quét mã QR lịch hẹn của người dân. Cán bộ tiến hành đo đạc và nhập các chỉ số như huyết áp, nhịp tim và lấy máu xét nghiệm (có hợp lệ hay không). Nếu chỉ số hợp lệ, cán bộ nhấn nút "Đồng ý lấy máu", hệ thống sẽ gửi lệnh máy in xuất ra một tem mã vạch để dán lên túi máu.
+* **Đối với Người hiến máu:** Người dùng truy cập cổng thông tin web, đăng ký tài khoản và nhập thông tin cá nhân hoặc đăng nhập nếu đã có tài khoản. Người dùng có thể xem các chiến dịch đang được mở trên địa bàn Hà Nội bất cứ lúc nào. Nếu hệ thống kiểm tra lịch sử hiến máu lớn hơn 12 tuần [(Thông tin)](https://www.vinmec.com/vie/bai-viet/thoi-gian-toi-thieu-giua-cac-lan-hien-mau-la-bao-lau-de-dam-bao-suc-khoe-vi), người dùng được phép chọn địa điểm chiến dịch và khung giờ (Time-slot) để đặt lịch hẹn.
+* **Đối với Cán bộ y tế:** Sử dụng thiết bị di động quét mã QR lịch hẹn của người dân. Cán bộ tiến hành đo đạc và nhập các chỉ số như huyết áp, nhịp tim và lấy máu xét nghiệm nhanh và gửi đến cho kỹ thuật viên xét nghiệm (có hợp lệ hay không). Nếu chỉ số hợp lệ, cán bộ nhấn nút "Đồng ý lấy máu", hệ thống sẽ gửi lệnh máy in xuất ra một tem mã vạch để dán lên túi máu.
 * **Đối với Kỹ thuật viên xét nghiệm:** Đăng nhập vào phân hệ quản lý kho. Kỹ thuật viên dùng máy quét mã vạch trên túi máu, lấy 3-4 ống máu nhỏ để làm xét nghiệm chuyên sâu và cập nhật kết quả xét nghiệm âm tính hoặc dương tính. Nếu âm tính, kỹ thuật viên gán vị trí lưu trữ (Ví dụ: Tủ lạnh số 02, Ngăn số 04) để đưa vào kho.
 * **Đối với Bệnh viện tuyến dưới:** Nhân viên bệnh viện đăng nhập, điền biểu mẫu điện tử xin cấp máu chỉ định rõ mức độ ưu tiên. Hệ thống tại Trung tâm Huyết học sẽ tiếp nhận, chạy thuật toán FEFO để tìm kiếm các túi máu phù hợp nhất, trừ đi số lượng tồn kho và thông báo trạng thái "Đang vận chuyển" về lại màn hình của bệnh viện.
 
